@@ -1,0 +1,24 @@
+{
+  "name": "layout",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.0.0",
+    "gulp-install": "^1.1.0",
+    "jquery": "^3.3.1",
+    "popper.js": "^1.12.9",
+    "tooltip.js": "^1.1.7"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.23.5",
+    "gulp": "^3.9.1",
+    "gulp-install": "^1.1.0",
+    "gulp-sass": "^3.1.0"
+  }
+}

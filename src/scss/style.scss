@@ -1,0 +1,68 @@
+$bg-color: #fff;
+$nav-color: #b2dfdb;
+$nav-font-color: #fff;
+$contact-button-color: #26a69a;
+
+$main-font: 'Arima Madurai', cursive;
+
+body {
+  background-color: $bg-color;
+  font-family: $main-font;
+}
+
+.menuNav {
+  background-color: $nav-color;
+  padding-bottom: 1px !important;
+  font-size: 25px;
+}
+
+.menuLink {
+  color: $nav-font-color;
+}
+
+.logo {
+  width: 150px;
+  padding: 1px 30px 1px 30px;
+  margin-left: 20%;
+}
+
+.contact {
+  font-size: 28px;
+  padding: 1px 30px 1px 30px;
+  background-color: $contact-button-color;
+  border-color: transparent;
+}
+.contact:hover {
+  background-color: #a2d8d3;
+  border-color: transparent;
+}
+
+.headerImage {
+  background-image: url("http://www.hannaandersson.com/dw/image/v2/BBLM_PRD/on/demandware.static/-/Sites-hannaandersson-Library/default/dw3c21e33a/images/homepage/SP18-0119-hp-promo-image.jpg?sw=1024&sfrm=jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 500px;
+}
+
+.cardTitle {
+  border: 1px solid black;
+  background-color: black;
+  color: #fff;
+  font-family: $main-font;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.sidebarLeft {
+  padding-left: 10%;
+}
+
+.sidebarLeftItem {
+  margin-bottom: 5%;
+}
+
+.footer {
+  min-height: 200px;
+  background-color: #a2d8d3;
+  text-align: center;
+}
