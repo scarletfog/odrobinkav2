@@ -1,4 +1,2 @@
-# odrobinkav2
-
-npm i
-gulp
+#npm install
+#gulp

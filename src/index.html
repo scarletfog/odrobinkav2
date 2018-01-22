@@ -12,63 +12,65 @@
 </head>
 
 <body>
-<!--Facebook plugin -->
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = 'https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.11';
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
+  <!--Facebook plugin -->
+  <div id="fb-root"></div>
+  <script>
+    (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = 'https://connect.facebook.net/pl_PL/sdk.js#xfbml=1&version=v2.11';
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));
+  </script>
 
   <header class="blog-header py-3 menuNav">
     <div class="row">
       <div class="col-md-6">
-          <ul class="nav d-flex justify-content-between">
+        <ul class="nav d-flex justify-content-between">
           <li class="nav-item">
-              <!-- Button trigger modal -->
-              <button type="button" class="btn btn-primary contact" data-toggle="modal" data-target="#exampleModal">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-primary contact" data-toggle="modal" data-target="#exampleModal">
                   <i class="fas fa-envelope"></i>
     </button>
-  
-              <!-- Modal -->
-              <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                  <div class="modal-content">
-                    <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLabel">Formularz kontaktowy</h5>
-                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Formularz kontaktowy</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
-                    </div>
-                    <div class="modal-body">
-                        <form>
-                            <div class="form-group">
-                                <label for="exampleFormControlTextarea1">Treść wiadomości</label>
-                                <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Miejsce na Twoją wiadomość" rows="5"></textarea>
-                              </div>
-                            <div class="form-group">
-                              <label for="exampleFormControlInput1">Adres e-mail</label>
-                              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                            </div>
-                          </form>
-                    </div>
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
-                      <button type="button" class="btn btn-primary">Wyślij <i class="fas fa-paper-plane"></i></button>
-                    </div>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="form-group">
+                        <label for="exampleFormControlTextarea1">Treść wiadomości</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Miejsce na Twoją wiadomość" rows="5"></textarea>
+                      </div>
+                      <div class="form-group">
+                        <label for="exampleFormControlInput1">Adres e-mail</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                      </div>
+                    </form>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
+                    <button type="button" class="btn btn-primary">Wyślij <i class="fas fa-paper-plane"></i></button>
                   </div>
                 </div>
               </div>
-            </li>
-            <li class="nav-item">
-                <img src="assets/grey2.png" class="logo" alt="Logo">
-            </li>
-            <li></li>
-            <li></li>
-          </ul>
+            </div>
+          </li>
+          <li class="nav-item">
+            <img src="assets/grey2.png" class="logo" alt="Logo">
+          </li>
+          <li></li>
+          <li></li>
+        </ul>
       </div>
       <div class="col-md-6">
         <ul class="nav justify-content-end">
@@ -92,61 +94,96 @@
       </div>
     </div>
   </header>
- 
-      <div class="jumbotron jumbotron-fluid headerImage">      
-        </div>
-<div class="row">
-    <div class="col-md-4 sidebarLeft">
-        <div class="container">
-        <ul class="nav flex-column">
-            <li class="nav-item sidebarLeftItem">
-                <div class="card" style="width: 18rem;">
-                    <div class="cardTitle">Gdzie zamówić?</div>
-                    <div class="card-body">
-                      <p class="card-text">Tel
-                          Mail
-                          Facebook
-                          Sklep allegro
-                          Masz pytania? Napisz do nas przez formularz lub na facebooku</p>
-                    </div>
-                  </div>
-            </li>
-            <li class="nav-item sidebarLeftItem">
-                <div class="card" style="width: 18rem;">
-                    <div class="cardTitle">Facebook</div>
-                    <div class="card-body">
-                        <div class="fb-page" 
-                        data-tabs="events"
-                        data-href="https://www.facebook.com/YoloBookStore"
-                        data-width="380"></div>
-                  </div>
-            </li>
-            <li class="nav-item sidebarLeftItem">
-                <div class="card" style="width: 18rem;">
-                    <div class="cardTitle">Bestseller</div>
-                    <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                  </div>
-            </li>
-            <li class="nav-item sidebarLeftItem">
-                <div class="card" style="width: 18rem;">
-                    <div class="cardTitle">HOT! Promocja</div>
-                    <div class="card-body">
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                    </div>
-                  </div>
-            </li>
-          </ul>
-    </div>
+
+  <div class="jumbotron jumbotron-fluid headerImage">
   </div>
-    <div class="col-md-8">
+  <div class="row">
+    <div class="col-md-3 sidebarLeft">
+      <div class="container">
+        <ul class="nav flex-column">
+          <li class="nav-item sidebarLeftItem">
+            <div class="card" style="width: 18rem;">
+              <div class="cardTitle">Gdzie zamówić?</div>
+              <div class="card-body">
+                <p class="card-text">Tel Mail Facebook Sklep allegro Masz pytania? Napisz do nas przez formularz lub na facebooku</p>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item sidebarLeftItem">
+            <div class="card" style="width: 18rem;">
+              <div class="cardTitle">Facebook</div>
+              <div class="card-body">
+                <div class="fb-page" data-tabs="events" data-href="https://www.facebook.com/0-drobinka-1754633444846469/" data-width="380"></div>
+              </div>
+          </li>
+          <li class="nav-item sidebarLeftItem">
+            <div class="card" style="width: 18rem;">
+              <div class="cardTitle">Bestseller</div>
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item sidebarLeftItem">
+            <div class="card" style="width: 18rem;">
+              <div class="cardTitle">HOT! Promocja</div>
+              <div class="card-body">
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <div class="container">
+          <div class="card mb-3 blogCard">
+            <div class="d-flex p-2 d-flex justify-content-between">
+              <img src="http://polki.pl/foto/16_9_LARGE_0100/ubranka-na-lato-rozmiar-68-1112525.jpg" alt="..." class="blogImage">
+              <img src="http://cdn19.dlarodzinki.smcloud.net/t/photos/t/5916/ubranka-dla-noworodka-jaki-rozmiar_341588.png" alt="..." class="blogImage">
+              <img src="http://s3-eu-central-1.amazonaws.com/superstyler.pl/wp-content/uploads/2015/04/ubranka-dla-dzieci-1280x1000.jpg" alt="..." class="blogImage">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title blogTitle">Tytuł wpisu</h5>
+              <p class="card-text">Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus varius ac leo vitae semper. Aliquam eu tincidunt urna, ac luctus tellus. Proin bibendum, eros et vehicula maximus, sem velit eleifend diam,
+                non imperdiet ex nisi eget erat. Duis facilisis, risus et venenatis luctus, velit felis convallis erat, sed placerat elit metus id purus. Quisque a tellus quis odio porta cursus a elementum diam. Vivamus condimentum tincidunt ipsum, at
+                ultricies ex interdum in.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+          <div class="card mb-3 blogCard">
+            <div class="d-flex p-2 d-flex justify-content-between">
+              <img src="http://polki.pl/foto/16_9_LARGE_0100/ubranka-na-lato-rozmiar-68-1112525.jpg" alt="..." class="blogImage">
+              <img src="http://cdn19.dlarodzinki.smcloud.net/t/photos/t/5916/ubranka-dla-noworodka-jaki-rozmiar_341588.png" alt="..." class="blogImage">
+              <img src="http://s3-eu-central-1.amazonaws.com/superstyler.pl/wp-content/uploads/2015/04/ubranka-dla-dzieci-1280x1000.jpg" alt="..." class="blogImage">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title blogTitle">Tytuł wpisu</h5>
+              <p class="card-text">Sed interdum scelerisque blandit. Sed interdum pellentesque risus sit amet gravida. Nam vel ante enim. Aenean in nunc efficitur, venenatis lorem eu, egestas erat. Mauris facilisis sapien at augue porta, ac tristique turpis ultrices. Vivamus
+                venenatis neque id metus vehicula fermentum. Aenean dui metus, auctor eu felis ut, condimentum interdum tortor.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+          <div class="card mb-3 blogCard">
+            <div class="d-flex p-2 d-flex justify-content-between">
+              <img src="http://polki.pl/foto/16_9_LARGE_0100/ubranka-na-lato-rozmiar-68-1112525.jpg" alt="..." class="blogImage">
+              <img src="http://cdn19.dlarodzinki.smcloud.net/t/photos/t/5916/ubranka-dla-noworodka-jaki-rozmiar_341588.png" alt="..." class="blogImage">
+              <img src="http://s3-eu-central-1.amazonaws.com/superstyler.pl/wp-content/uploads/2015/04/ubranka-dla-dzieci-1280x1000.jpg" alt="..." class="blogImage">
+            </div>
+            <div class="card-body">
+              <h5 class="card-title blogTitle">Tytuł wpisu</h5>
+              <p class="card-text">In pretium elementum ultricies. Aliquam bibendum arcu et egestas volutpat. Vestibulum non pharetra ante. Suspendisse sapien sapien, cursus in nisl id, lobortis dapibus elit. Pellentesque vitae laoreet mauris. Sed scelerisque ipsum non viverra
+                elementum. Phasellus et ipsum magna. Sed sit amet vehicula elit, non suscipit odio. Aliquam aliquam suscipit porttitor. Aliquam lacus tellus, rutrum eget nibh ac, rutrum blandit nunc. Donec ut pretium nisi.</p>
+              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-</div>
 
     <footer class="text-center">
-        <p>© 2018 O-drobinka</p>
-        <img src="http://jesien.scob24.pl/wp-content/themes/tribute/images/EU_EFS_rgb-1.jpg" alt="unia" width="300">
+      <img src="http://jesien.scob24.pl/wp-content/themes/tribute/images/EU_EFS_rgb-1.jpg" alt="unia" width="300">
+      <p>© 2018 O-drobinka</p>
 
     </footer>
 
