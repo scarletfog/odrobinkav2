@@ -3,6 +3,7 @@
 
 <head>
   <title>Odrobinka</title>
+  <meta charset="UTF-8">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -15,7 +16,7 @@
   <!--Facebook plugin -->
   <div id="fb-root"></div>
   <script>
-    (function(d, s, id) {
+    (function (d, s, id) {
       var js, fjs = d.getElementsByTagName(s)[0];
       if (d.getElementById(id)) return;
       js = d.createElement(s);
@@ -32,8 +33,8 @@
           <li class="nav-item">
             <!-- Button trigger modal -->
             <button type="button" class="btn btn-primary contact" data-toggle="modal" data-target="#exampleModal">
-                  <i class="fas fa-envelope"></i>
-    </button>
+              <i class="fas fa-envelope"></i>
+            </button>
 
             <!-- Modal -->
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -42,25 +43,33 @@
                   <div class="modal-header">
                     <h5 class="modal-title" id="exampleModalLabel">Formularz kontaktowy</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-              <span aria-hidden="true">&times;</span>
-            </button>
+                      <span aria-hidden="true">&times;</span>
+                    </button>
                   </div>
-                  <div class="modal-body">
-                    <form>
-                      <div class="form-group">
-                        <label for="exampleFormControlTextarea1">Treść wiadomości</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Miejsce na Twoją wiadomość" rows="5"></textarea>
-                      </div>
-                      <div class="form-group">
-                        <label for="exampleFormControlInput1">Adres e-mail</label>
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-                      </div>
-                    </form>
-                  </div>
-                  <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
-                    <button type="button" class="btn btn-primary">Wyślij <i class="fas fa-paper-plane"></i></button>
-                  </div>
+                  <div class="modal-body termsBody">
+                      <div id="form-messages"></div>
+                      <form id="ajax-contact" method="post" action="mailer.php">
+                        <div class="field">
+                          <label for="name">Imię*:</label>
+                          <input type="text" id="name" name="name" required>
+                        </div>
+  
+                        <div class="field">
+                          <label for="email">Adres email*:</label>
+                          <input type="email" id="email" name="email" required>
+                        </div>
+  
+                        <div class="field">
+                          <label for="message">Wiadomość*:</label>
+                          <textarea id="message" name="message" required></textarea>
+                        </div>
+  
+                        <div class="field">
+                          <button type="submit" class="btn btn-primary">Wyślij <i class="fas fa-paper-plane"></i></button>
+                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
+                        </div>
+                      </form>
+                    </div>
                 </div>
               </div>
             </div>
@@ -75,17 +84,19 @@
       <div class="col-md-6">
         <ul class="nav justify-content-end">
           <li class="nav-item">
+            <a class="nav-link menuLink" href="index.html">Strona główna</a>
+          </li>
+          <li class="nav-item">
             <a class="nav-link menuLink" href="o_mnie.html">O mnie</a>
           </li>
-
           <li class="nav-item">
-            <a class="nav-link menuLink" href="facebook.html">Facebook</a>
+            <a class="nav-link menuLink" href="https://www.facebook.com/odrobinka.kids" target="_blank">Facebook</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link menuLink" href="https://www.allegro.pl">Allegro</a>
+            <a class="nav-link menuLink" href="https://allegro.pl/uzytkownik/O-drobinka" target="_blank">Allegro</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link menuLink" href="regulamin.html">Regulamin</a>
+            <a class="nav-link menuLink" href="#" data-toggle="modal" data-target="#termsModal">Regulamin</a>
           </li>
           <li class="nav-item">
             <a class="nav-link menuLink" href="kontakt.html">Kontakt</a>
@@ -93,6 +104,212 @@
         </ul>
       </div>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="termsModal" tabindex="-1" role="dialog" aria-labelledby="termsModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content termsContent">
+          <div class="modal-header">
+            <h5 class="modal-title" id="termsModalLabel">Regulamin</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body termsBody">
+            <p>
+              <p>Właścicielem i prowadzącym w/w Sklep Internetowy jest:</br>
+                ALTO Aleksandra Wójcik</br>
+                ul. Załogi 23</br>
+                42-208 Częstochowa</p>
+              <p>
+                Regulamin został udostępniony zgodnie z wymogami art. 8 ust. 1 Ustawy o świadczeniu usług drogą elektroniczną (Dz.U. nr 144
+                z 2002 r., poz. 1204 z późn. zm.).</br>
+
+                Przed złożeniem zamówienia należy uważnie zapoznać się z treścią Regulaminu. Dokonując zakupu w Sklepie Internetowym Klient
+                akceptuje postanowienia zawarte w niniejszym Regulaminie.</br>
+              </p>
+              <h6>DEFINICJE</h6>
+              <p>
+                Dla celów niniejszego Regulaminu poniższe wyrazy i wyrażenia otrzymują następujące znaczenie: </br>
+                <ol>
+                  <li> Strona– serwis internetowy http://o-drobinka.pl/</li>
+                  <li> Sklep Internetowy – prowadzony przez Firmę serwis sprzedaży on-line, dostępny dla Klientów, w ramach którego
+                    Klient ma możliwość nabywania Towarów we wskazanym na stronie miejscu. Sklep Internetowy dostępny jest
+                    w domenie: http://o-drobinka.pl/</li>
+                  <li> Towar – produkt oferowany Klientowi przez Firmę za pośrednictwem Sklepu Internetowego.</li>
+                  <li> Klient – osoba fizyczna składająca Zamówienie we wskazanym miejscu w sklepie interentowym lub osoba prawna
+                    względnie jednostka organizacyjna nie posiadająca osobowości prawnej w imieniu której dokonywana jest
+                    Transakcja;</li>
+                  <li> Zamówienie – przesłanie przez Klienta do Sklepu Internetowego zamówienia, poprzez dostępne opcje na Stronie,
+                    wskazując m.in. dane Klienta oraz Towar, który Klient zamierza nabyć w Sklepie;</li>
+                  <li> Transakcja– dokonanie przez Klienta zakupu Towaru ze Sklepu Internetowego zgodnie z postanowieniami niniejszego
+                    Regulaminu, na podstawie złożonego Zamówienia;</li>
+                  <li> Płatność– świadczenie pieniężne Klienta dokonywane z tytułu Transakcji.</li>
+                  <li> Firma- ALTO Aleksandra Wójcik</li>
+                </ol>
+              </p>
+              <h6>WARUNKI KORZYSTANIA ZE STRONY PRZEZ KLIENTA</h6>
+              <ol>
+                <li> Poprzez Stronę Klient ma możliwość zapoznania się z ofertą Sklepu Internetowego oraz złożenia Zamówienia
+                  korzystając ze wskazanych do tego opcji.</li>
+                <li> Przekazując swoje dane związane z Zamówieniem, Klient ma obowiązek podawania informacji prawdziwych. Klient
+                  nie może podawać treści niezgodnych z prawem, a w szczególności:</li>
+                <ol>
+                  <li> treści powszechnie uznanych za obraźliwe lub sprzeczne z dobrymi obyczajami,</li>
+                  <li> treści zawierających informacje nieprawdziwe,</li>
+                  <li> treści zawierających informację niechcianą (tzw. spam),</li>
+                  <li> treści oraz/lub plików, które mogą zakłócić prawidłowe funkcjonowanie Strony.</li>
+                </ol>
+              </ol>
+              <h6>WARUNKI WYKONYWANIA TRANSAKCJI</h6>
+              <ol>
+                <li> Klient dokonuje Transakcji, składając Zamówienie przy użyciu dostępnych opcji na Stronie.</li>
+                <li> Sklep Internetowy prowadzi sprzedaż detaliczną.</li>
+                <li> Sklep Internetowy jest dostępny dla Klientów 24 godziny na dobę przez 7 dni w tygodniu.</li>
+                <li> Towar oferowany w Sklepie Internetowym jest fabrycznie nowy, wolny od wad prawnych, wprowadzony na polski
+                  rynek zgodnie z przepisami prawa. Firma dokłada najwyższej staranności, aby oferowane przez nią Towary
+                  spełniały wysokie wymogi jakościowe.</li>
+                <li> Dla potrzeb złożenia Zamówienia i dokonania Transakcji konieczne jest, aby Klient wskazał dane umożliwiające
+                  kontakt i wysyłkę zamówionego Towaru. </li>
+                <li> Firma informuje, że szczegóły wyglądu zewnętrznego Towarów oferowanych w Sklepie Internetowym (w szczególności
+                  kolory i odcienie) widoczne na urządzeniach Klienta (monitor, wyświetlacz) lub na wykonanych przez Klienta
+                  wydrukach mogą różnić się od rzeczywistych, w zależności od indywidualnych właściwości i ustawień tych
+                  urządzeń.</li>
+                <li> Przed dokonaniem wysyłki Towaru objętego Zamówieniem, Klient ma prawo odstąpić od Zamówienia lub dokonać
+                  w nim modyfikacji, kontaktując się ze Sklepem Internetowym pod adresem email: sklep@o-drobinka.pl </li>
+                <li> Dostarczenie zamówionego Towaru następuje w terminie od 2 do 10 dni roboczych od daty złożenia Zamówienia
+                  i dokonania Płatności (w przypadku przesyłek za pobraniem – od daty złożenia Zamówienia). W przypadku niemożności
+                  realizacji Zamówienia we wskazanym terminie Klient zostanie niezwłocznie poinformowany o tym fakcie oraz
+                  o przewidywanym terminie wykonania Transakcji (nie dłuższym niż 30 dni od daty złożenia Zamówienia), na
+                  adres email wskazany w Zamówieniu. W takiej sytuacji Klient może dokonać modyfikacji Zamówienia w sposób
+                  uzgodniony z pracownikami Sklepu Internetowego lub odstąpić od Zamówienia.</li>
+                <li>Zamówiony Towar dostarczany jest Klientowi przez Pocztę Polską na adres wskazany w Zamówieniu.</li>
+                <li> Zamówienia złożone w dni powszednie po godzinie 17:00, w soboty i niedziele oraz dni ustawowo wolne od pracy,
+                  będą rozpatrywane następnego dnia roboczego.</li>
+              </ol>
+              <h6>CENY TOWARÓW I KOSZTY DOSTARCZENIA</h6>
+              <ol>
+                <li> Ceny Towarów oferowanych w Sklepie Internetowym wyrażone są w walucie polskiej i obejmują podatek VAT.</li>
+                <li> Wiążące dla Stron są ceny obowiązujące w chwili składania Zamówienia przez Klienta nawet gdyby po złożeniu
+                  Zamówienia, a przed dokonaniem Płatności uległy zmianie.</li>
+                <li> Ceny Towarów dostarczanych w ramach Transakcji nie zawierają kosztów doręczenia.</li>
+                <li> Koszty doręczenia Towarów w ramach Transakcji ponoszone są przez Klienta, zgodnie z cennikiem tych usług
+                  dostępnym na Stronie. Koszty doręczenia Klient pokrywa w chwili dokonywania Płatności.</li>
+                <li> Dostawy realizowane są na terenie Polski. W przypadku wysyłki zagranicznej konieczne jest ustalenie z Firmą
+                  indywidualnego kosztu wysyłki dla danego kraju.</li>
+              </ol>
+              <h8>Koszt dostawy uzależniony jest od wybranego sposobu dostawy i płatności i wynosi:</h8>
+              <ul>
+                <li> w przypadku przesyłki listem poleconym Ekonomiczny do 1 kg – 11,00 PLN brutto;</li>
+                <li> w przypadku przesyłki listem poleconym Priorytet do 1 kg – 12,00 PLN brutto;</li>
+                <li> w przypadku przesyłki listem poleconym Ekonomicznym od 1kg do 2kg – 13,00 PLN brutto;</li>
+                <li> w przypadku przesyłki listem poleconym Priorytet od 1kg do 2kg – 15,00 PLN brutto </li>
+                <li> w przypadku przesyłki Paczka Ekonomiczna od 2kg do 5kg – 19,00 PLN brutto </li>
+                <li> w przypadku przesyłki Paczka Priorytet od 2kg do 5kg – 20,00 PLN brutto </li>
+              </ul>
+              <h6>PŁATNOŚĆ</h6>
+
+              <h8>W ramach wykonania Transakcji, Klient może dokonać Płatności w jednej z następujących form:</h8>
+
+              <p>przelew zwykły na rachunek bankowy Firmy, jak poniżej
+                <br> ALTO Aleksandra Wójcik
+                <br> ul. Załogi 23
+                <br> 42-208 Częstochowa
+                <br> Bank Zachodni WBK
+                <br> 95 1500 1399 1013 9011 2934 0000
+                <br> lub płatność za pobraniem,tj. dokonanie Płatności gotówką przy odbiorze zamówionego Towaru za pokwitowaniem.</p>
+
+              <h8>Klient niezwłocznie po złożeniu zamówienia danego Towaru dokonuje płatności, nie później niż w terminie do
+                7 dni od daty złożenia Zamówienia. W tytule dokonywanej Płatności należy podać: imię i nazwisko i skróconą
+                nazwę produktu np. sukienka, spodnie itd.</h8>
+
+              Płatność uznaje się za dokonaną:
+              <ul>
+                <li>po zaksięgowaniu wpłaty na rachunku bankowym Firmy, w przypadku przelewu zwykłego</li>
+                <li>z chwilą uiszczenia odpowiedniej kwoty kurierowi w przypadku płatności za pobraniem</li>
+              </ul>
+              <h6>OCHRONA DANYCH OSOBOWYCH. POLITYKA PRYWATNOŚCI</h6>
+              <ol>
+                <li> Dane Klienta, który złożył Zamówienie określa rozdział 4 w/w ustawy . Do przetwarzania danych osobowych w
+                  rozumieniu ustawy z dnia 29 sierpnia 1997 r. o ochronie danych osobowych (Dz. U. z 2015 r. poz. 2135 i
+                  2281 oraz z 2016 r. poz. 195 i 677), w związku ze świadczeniem usług drogą elektroniczną, stosuje się przepisy
+                  tej ustawy, o ile przepisy niniejszego rozdziału nie stanowią inaczej.</li>
+                <li> Dane Klienta mogą być przetwarzane w celach marketingowych oraz informacyjnych dotyczących oferty Sklepu
+                  Internetowego w zakresie, w jakim Klient wyraził na to zgodę, zgodnie z art. 23 ust. 1 pkt 1 ustawy o ochronie
+                  danych osobowych (tekst jedn. Dz. U. z 2002 Nr 101, poz. 926, z późn. zm.).</li>
+              </ol>
+              <h6>ZWROT</h6>
+              <ol>
+                <li>Zgodnie z Ustawą z dnia 30.05.2014r. O prawach konsumenta (Dz.U. poz.827) Klient ma prawo w terminie 14 dni
+                  odstąpić od dokonanej Transakcji bez podawania przyczyny. Może to zrobić składając, w terminie 14 dni od
+                  daty doręczenia Towaru stosowne oświadczenie na piśmie. Dla zachowania powyższego terminu wystarczy aby
+                  przedmiotowe oświadczenie zostało wysłane przez Klienta przed jego upływem. Oświadczenie o odstąpieniu
+                  od umowy powinno być wysłane na adres : ALTO
+                  </br>
+                  Aleksandra Wójcik</br>
+                  ul. Załogi 23</br>
+                  42-208 Częstochowa</br>
+                  (z dopiskiem: „ZWROT”)</br>
+
+                  Lub mailowo na adres : sklep@o-drobinka.pl </br>
+                  o-drobinika ( wpisując w tytule „ZWROT” )</br>
+                </li>
+                <li> Klient ponosi tylko bezpośrednie koszty zwrotu rzeczy. Klient powinien zwrócić rzecz Firmie, na swój koszt
+                  (odesłania rzeczy do sprzedawcy) w terminie 14 dni od dnia odstąpienia od umowy. </li>
+                <li> Wykonując prawo odstąpienia Klient zobowiązany jest do zwrotu Towaru w stanie niezmienionym (ewentualne dopuszczalne
+                  zmiany stanu Towaru to zmiany konieczne i wynikające ze zwykłego zarządu Towarem) – Klient ponosi odpowiedzialność
+                  za zmniejszenie wartości rzeczy będące wynikiem korzystania z niej w sposób wykraczający poza konieczny
+                  do stwierdzenia charakteru, cech i funkcjonowania rzeczy . </li>
+                <li> Zwrot Towaru powinien być dokonany poprzez przesłanie Towaru na adres Firmy. Sugeruje się przesłanie Towaru
+                  wraz z oświadczeniem o odstąpieniu od Umowy.</li>
+                <li> Firma ma obowiązek niezwłocznie, nie później niż w terminie 14 dni od dnia otrzymania oświadczenia konsumenta
+                  o odstąpieniu od umowy, zwrócić konsumentowi wszystkie dokonane przez niego płatności, w tym koszty dostarczenia
+                  rzeczy. </li>
+                <li> Firma dokonuje zwrotu płatności przy użyciu takiego samego sposobu zapłaty, jakiego użył Klient, chyba że
+                  Klient wyraźnie zgodził się na inny sposób zwrotu, który nie wiąże się dla niego z żadnymi kosztami. </li>
+                <li> Jeżeli Klient wybrał sposób dostarczenia rzeczy inny niż najtańszy zwykły sposób dostarczenia oferowany przez
+                  Firmę, Firma nie jest zobowiązany do zwrotu konsumentowi poniesionych przez niego dodatkowych kosztów.</li>
+              </ol>
+              <h6>WYMIANA</h6>
+              <ol>
+                <li>Prosimy odesłać zwracany model na adres podany poniżej wraz z fakturą / paragonem oraz wypełnionym Oświadczeniem
+                  o odstąpieniu od umowy. We wskazanym oświadczeniu prosimy zaznaczyć swoją chęć wymiany.</li>
+                <li>Różnicę w cenie towaru na wymianę oraz koszty ponownej przesyłki będą regulowane zgodnie z zasadami zwrotu
+                  towaru. ALTO
+                  </br>
+                  Aleksandra Wójcik </br>
+                  ul. Załogi 23 </br>
+                  42-208 Częstochowa </br>
+
+                  (z dopiskiem: „WYMIANA TOWARU”)
+                </li>
+                <li>Po otrzymaniu przesyłki w jak najszybszym możliwym terminie zostanie wysłany towar na wymianę.</li>
+                <li>Termin dokonania zamówienia w ramach wymiany oraz odesłania zwracanego towaru na adres sklepu Internetowego
+                  obowiązuje jak w przypadku całkowitego zwrotu towaru.</li>
+              </ol>
+              <h6>POSTANOWIENIA KOŃCOWE</h6>
+              <ol>
+                <li>Wszelkie Transakcje dokonywane są między Klientem a Firmą.</li>
+                <li>Zaleca się, by Klient dokładnie obejrzał przesyłkę bezpośrednio po jej doręczeniu, przed potwierdzeniem jej
+                  odbioru kurierowi, w celu ustalenia ewentualnych uszkodzeń mechanicznych Towaru (jego opakowania). W przypadku
+                  ewentualnych uszkodzeń mechanicznych Towaru (jego opakowania) zaleca się, by Klient zażądał od kuriera
+                  doręczającego przesyłkę sporządzenia protokołu oraz by podpisał protokół. W szczególności, gdy opakowanie
+                  przesyłki nosi ślady uszkodzenia, zaleca się by Klient przesyłki nie przyjmował, a o zaistniałej sytuacji
+                  niezwłocznie powiadomił Firmę telefonicznie lub pocztą elektroniczną</li>
+                <li>Spory pomiędzy Klientem a Firmą, wynikające ze złożonego Zamówienia lub dokonanej Transakcji będą rozpatrywane
+                  przez sąd powszechny właściwy zgodnie z przepisami Kodeksu postępowania cywilnego.</li>
+                <li>W sprawach nieuregulowanych niniejszym Regulaminem stosuje się przepisy prawa powszechnie obowiązującego.</li>
+                <li>Niniejszy Regulamin obowiązuje od dnia 03 stycznia 2018 roku.</li>
+              </ol>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
   </header>
 
   <div class="jumbotron jumbotron-fluid headerImage">
@@ -105,7 +322,16 @@
             <div class="card" style="width: 18rem;">
               <div class="cardTitle">Gdzie zamówić?</div>
               <div class="card-body">
-                <p class="card-text">Tel Mail Facebook Sklep allegro Masz pytania? Napisz do nas przez formularz lub na facebooku</p>
+                <p class="card-text">
+                  <ul class="orderList">
+                  <li>Telefonicznie: 519 125 116</li> 
+                  <li>Mailowo: sklep@o-drobinka.pl</li> 
+                  <li>Poprzez <a href="https://www.facebook.com/odrobinka.kids" target="_blank">Facebook</a> </li> 
+                  <li>Sklep <a href="https://allegro.pl/uzytkownik/O-drobinka" target="_blank">Allegro</a> </li> </br>
+                  <li><b>Masz pytania?</b> </li> 
+                  <li>Napisz do nas przez formularz lub na facebooku</li> 
+                  </ul>
+                </p>
               </div>
             </div>
           </li>
@@ -113,7 +339,7 @@
             <div class="card" style="width: 18rem;">
               <div class="cardTitle">Facebook</div>
               <div class="card-body">
-                <div class="fb-page" data-tabs="events" data-href="https://www.facebook.com/0-drobinka-1754633444846469/" data-width="380"></div>
+                <div class="fb-page" data-tabs="events" data-href="https://www.facebook.com/odrobinka.kids" data-width="380"></div>
               </div>
           </li>
           <li class="nav-item sidebarLeftItem">
@@ -141,40 +367,56 @@
             <div class="d-flex p-2 d-flex justify-content-between">
               <img src="http://polki.pl/foto/16_9_LARGE_0100/ubranka-na-lato-rozmiar-68-1112525.jpg" alt="..." class="blogImage">
               <img src="http://cdn19.dlarodzinki.smcloud.net/t/photos/t/5916/ubranka-dla-noworodka-jaki-rozmiar_341588.png" alt="..." class="blogImage">
-              <img src="http://s3-eu-central-1.amazonaws.com/superstyler.pl/wp-content/uploads/2015/04/ubranka-dla-dzieci-1280x1000.jpg" alt="..." class="blogImage">
+              <img src="http://s3-eu-central-1.amazonaws.com/superstyler.pl/wp-content/uploads/2015/04/ubranka-dla-dzieci-1280x1000.jpg"
+                alt="..." class="blogImage">
             </div>
             <div class="card-body">
               <h5 class="card-title blogTitle">Tytuł wpisu</h5>
-              <p class="card-text">Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus varius ac leo vitae semper. Aliquam eu tincidunt urna, ac luctus tellus. Proin bibendum, eros et vehicula maximus, sem velit eleifend diam,
-                non imperdiet ex nisi eget erat. Duis facilisis, risus et venenatis luctus, velit felis convallis erat, sed placerat elit metus id purus. Quisque a tellus quis odio porta cursus a elementum diam. Vivamus condimentum tincidunt ipsum, at
-                ultricies ex interdum in.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <p class="card-text">Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus varius ac
+                leo vitae semper. Aliquam eu tincidunt urna, ac luctus tellus. Proin bibendum, eros et vehicula maximus,
+                sem velit eleifend diam, non imperdiet ex nisi eget erat. Duis facilisis, risus et venenatis luctus, velit
+                felis convallis erat, sed placerat elit metus id purus. Quisque a tellus quis odio porta cursus a elementum
+                diam. Vivamus condimentum tincidunt ipsum, at ultricies ex interdum in.</p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
             </div>
           </div>
           <div class="card mb-3 blogCard">
             <div class="d-flex p-2 d-flex justify-content-between">
               <img src="http://polki.pl/foto/16_9_LARGE_0100/ubranka-na-lato-rozmiar-68-1112525.jpg" alt="..." class="blogImage">
               <img src="http://cdn19.dlarodzinki.smcloud.net/t/photos/t/5916/ubranka-dla-noworodka-jaki-rozmiar_341588.png" alt="..." class="blogImage">
-              <img src="http://s3-eu-central-1.amazonaws.com/superstyler.pl/wp-content/uploads/2015/04/ubranka-dla-dzieci-1280x1000.jpg" alt="..." class="blogImage">
+              <img src="http://s3-eu-central-1.amazonaws.com/superstyler.pl/wp-content/uploads/2015/04/ubranka-dla-dzieci-1280x1000.jpg"
+                alt="..." class="blogImage">
             </div>
             <div class="card-body">
               <h5 class="card-title blogTitle">Tytuł wpisu</h5>
-              <p class="card-text">Sed interdum scelerisque blandit. Sed interdum pellentesque risus sit amet gravida. Nam vel ante enim. Aenean in nunc efficitur, venenatis lorem eu, egestas erat. Mauris facilisis sapien at augue porta, ac tristique turpis ultrices. Vivamus
-                venenatis neque id metus vehicula fermentum. Aenean dui metus, auctor eu felis ut, condimentum interdum tortor.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <p class="card-text">Sed interdum scelerisque blandit. Sed interdum pellentesque risus sit amet gravida. Nam vel ante enim. Aenean
+                in nunc efficitur, venenatis lorem eu, egestas erat. Mauris facilisis sapien at augue porta, ac tristique
+                turpis ultrices. Vivamus venenatis neque id metus vehicula fermentum. Aenean dui metus, auctor eu felis ut,
+                condimentum interdum tortor.</p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
             </div>
           </div>
           <div class="card mb-3 blogCard">
             <div class="d-flex p-2 d-flex justify-content-between">
               <img src="http://polki.pl/foto/16_9_LARGE_0100/ubranka-na-lato-rozmiar-68-1112525.jpg" alt="..." class="blogImage">
               <img src="http://cdn19.dlarodzinki.smcloud.net/t/photos/t/5916/ubranka-dla-noworodka-jaki-rozmiar_341588.png" alt="..." class="blogImage">
-              <img src="http://s3-eu-central-1.amazonaws.com/superstyler.pl/wp-content/uploads/2015/04/ubranka-dla-dzieci-1280x1000.jpg" alt="..." class="blogImage">
+              <img src="http://s3-eu-central-1.amazonaws.com/superstyler.pl/wp-content/uploads/2015/04/ubranka-dla-dzieci-1280x1000.jpg"
+                alt="..." class="blogImage">
             </div>
             <div class="card-body">
               <h5 class="card-title blogTitle">Tytuł wpisu</h5>
-              <p class="card-text">In pretium elementum ultricies. Aliquam bibendum arcu et egestas volutpat. Vestibulum non pharetra ante. Suspendisse sapien sapien, cursus in nisl id, lobortis dapibus elit. Pellentesque vitae laoreet mauris. Sed scelerisque ipsum non viverra
-                elementum. Phasellus et ipsum magna. Sed sit amet vehicula elit, non suscipit odio. Aliquam aliquam suscipit porttitor. Aliquam lacus tellus, rutrum eget nibh ac, rutrum blandit nunc. Donec ut pretium nisi.</p>
-              <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+              <p class="card-text">In pretium elementum ultricies. Aliquam bibendum arcu et egestas volutpat. Vestibulum non pharetra ante. Suspendisse
+                sapien sapien, cursus in nisl id, lobortis dapibus elit. Pellentesque vitae laoreet mauris. Sed scelerisque
+                ipsum non viverra elementum. Phasellus et ipsum magna. Sed sit amet vehicula elit, non suscipit odio. Aliquam
+                aliquam suscipit porttitor. Aliquam lacus tellus, rutrum eget nibh ac, rutrum blandit nunc. Donec ut pretium
+                nisi.</p>
+              <p class="card-text">
+                <small class="text-muted">Last updated 3 mins ago</small>
+              </p>
             </div>
           </div>
         </div>
@@ -190,6 +432,7 @@
     <!-- Bootstrap core JavaScript -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/contact.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.0.4/js/all.js"></script>
 </body>
 
