@@ -2,6 +2,9 @@ $bg-color: #fff;
 $nav-color: #b2dfdb;
 $nav-font-color: #fff;
 $contact-button-color: #26a69a;
+$solo-logo-color: #2f6d67;
+$break-small: 768px;
+$break-medium: 1200px;
 
 $main-font: 'Arima Madurai', cursive;
 
@@ -14,16 +17,29 @@ body {
   background-color: $nav-color;
   padding-bottom: 1px !important;
   font-size: 23px;
+  @media screen and (max-width: $break-medium) {
+    font-size: 20px;
+  }
+  @media screen and (max-width: $break-small) {
+    font-size: 18px;
+  }
 }
 
 .menuLink {
-  color: $nav-font-color;
+  color: $nav-font-color !important;
+  &:hover {
+    color:$solo-logo-color !important;
+}
+  padding-left: 1.0rem !important;
 }
 
 .logo {
   width: 300px;
   padding: 1px 30px 1px 30px;
   margin-left: 1%;
+  @media screen and (max-width: $break-medium) {
+    max-width: 200px;
+  }
 }
 
 .contact {
@@ -57,6 +73,10 @@ body {
   z-index: 10;
   width: 408px;
   height: 240px;
+  @media screen and (max-width: $break-small) {
+    width: 204px;
+    height: 120px;
+  }
 }
 
 .cardTitle {
@@ -69,7 +89,8 @@ body {
 }
 
 .sidebarLeft {
-  padding-left: 10%;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .sidebarLeftItem {
@@ -106,4 +127,34 @@ body {
 .orderList {
   list-style-type: none;
   padding-left: 0;
+}
+
+.adapt {
+  width: auto !important;
+  margin: 0 auto;
+  display: block;
+}
+
+.noMargin {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+.addMargin {
+  margin-bottom: 10px !important;
+}
+
+.union {
+  width: 600px;
+  @media screen and (max-width: $break-small) {
+    width: 300px;
+  }
+}
+
+.about {
+  object-fit: contain;
+  max-width: 400px;
+  @media screen and (max-width: $break-medium) {
+    max-width: 300px;
+  }
 }

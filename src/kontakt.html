@@ -27,8 +27,8 @@
   </script>
 
   <header class="blog-header py-3 menuNav">
-    <div class="row">
-      <div class="col-md-6">
+    <div class="row noMargin">
+      <div class="col-md-6 col-sm-5 col-xl-6">
         <ul class="nav d-flex justify-content-between">
           <li class="nav-item">
             <!-- Button trigger modal -->
@@ -47,29 +47,31 @@
                     </button>
                   </div>
                   <div class="modal-body termsBody">
-                      <div id="form-messages"></div>
-                      <form id="ajax-contact" method="post" action="mailer.php">
-                        <div class="field">
-                          <label for="name">Imię*:</label>
-                          <input type="text" id="name" name="name" required>
-                        </div>
-  
-                        <div class="field">
-                          <label for="email">Adres email*:</label>
-                          <input type="email" id="email" name="email" required>
-                        </div>
-  
-                        <div class="field">
-                          <label for="message">Wiadomość*:</label>
-                          <textarea id="message" name="message" required></textarea>
-                        </div>
-  
-                        <div class="field">
-                          <button type="submit" class="btn btn-primary">Wyślij <i class="fas fa-paper-plane"></i></button>
-                          <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
-                        </div>
-                      </form>
-                    </div>
+                    <div id="form-messages"></div>
+                    <form id="ajax-contact" method="post" action="mailer.php">
+                      <div class="field">
+                        <label for="name">Imię*:</label>
+                        <input type="text" id="name" name="name" required>
+                      </div>
+
+                      <div class="field">
+                        <label for="email">Adres email*:</label>
+                        <input type="email" id="email" name="email" required>
+                      </div>
+
+                      <div class="field">
+                        <label for="message">Wiadomość*:</label>
+                        <textarea id="message" name="message" required></textarea>
+                      </div>
+
+                      <div class="field">
+                        <button type="submit" class="btn btn-primary">Wyślij
+                          <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Zamknij</button>
+                      </div>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
@@ -81,28 +83,41 @@
           <li></li>
         </ul>
       </div>
-      <div class="col-md-6">
-        <ul class="nav justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link menuLink" href="index.html">Strona główna</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link menuLink" href="o_mnie.html">O mnie</a>
-          </li>
+      <div class="col-md-6 col-sm-7 col-xl-6">
 
-          <li class="nav-item">
-            <a class="nav-link menuLink" href="https://www.facebook.com/odrobinka.kids" target="_blank">Facebook</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link menuLink" href="https://allegro.pl/uzytkownik/O-drobinka" target="_blank">Allegro</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link menuLink" href="#" data-toggle="modal" data-target="#termsModal">Regulamin</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link menuLink" href="kontakt.html">Kontakt</a>
-          </li>
-        </ul>
+
+        <nav class="navbar navbar-expand-lg navbar-light">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 addMargin">
+              <li class="nav-item active">
+                <a class="nav-link menuLink" href="index.html">Strona główna</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link menuLink" href="o_mnie.html">O mnie</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link menuLink" href="https://www.facebook.com/odrobinka.kids" target="_blank">Facebook</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link menuLink" href="https://allegro.pl/uzytkownik/O-drobinka" target="_blank">Allegro</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link menuLink" href="https://www.instagram.com/odrobinka.kids/" target="_blank">Instagram</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link menuLink" href="#" data-toggle="modal" data-target="#termsModal">Regulamin</a>
+              </li>
+              <li class="nav-item active">
+                <a class="nav-link menuLink" href="kontakt.html">Kontakt</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
     </div>
 
@@ -140,7 +155,8 @@
                   <li> Towar – produkt oferowany Klientowi przez Firmę za pośrednictwem Sklepu Internetowego.</li>
                   <li> Klient – osoba fizyczna składająca Zamówienie we wskazanym miejscu w sklepie interentowym lub osoba prawna
                     względnie jednostka organizacyjna nie posiadająca osobowości prawnej w imieniu której dokonywana jest
-                    Transakcja;</li>
+                    Transakcja;
+                  </li>
                   <li> Zamówienie – przesłanie przez Klienta do Sklepu Internetowego zamówienia, poprzez dostępne opcje na Stronie,
                     wskazując m.in. dane Klienta oraz Towar, który Klient zamierza nabyć w Sklepie;</li>
                   <li> Transakcja– dokonanie przez Klienta zakupu Towaru ze Sklepu Internetowego zgodnie z postanowieniami niniejszego
@@ -175,7 +191,8 @@
                 <li> Firma informuje, że szczegóły wyglądu zewnętrznego Towarów oferowanych w Sklepie Internetowym (w szczególności
                   kolory i odcienie) widoczne na urządzeniach Klienta (monitor, wyświetlacz) lub na wykonanych przez Klienta
                   wydrukach mogą różnić się od rzeczywistych, w zależności od indywidualnych właściwości i ustawień tych
-                  urządzeń.</li>
+                  urządzeń.
+                </li>
                 <li> Przed dokonaniem wysyłki Towaru objętego Zamówieniem, Klient ma prawo odstąpić od Zamówienia lub dokonać
                   w nim modyfikacji, kontaktując się ze Sklepem Internetowym pod adresem email: sklep@o-drobinka.pl </li>
                 <li> Dostarczenie zamówionego Towaru następuje w terminie od 2 do 10 dni roboczych od daty złożenia Zamówienia
@@ -217,7 +234,7 @@
                 <br> ul. Załogi 23
                 <br> 42-208 Częstochowa
                 <br> Bank Zachodni WBK
-                <br> 95 1500 1399 1013 9011 2934 0000
+                <br> 52 1090 2590 0000 0001 3583 2526
                 <br> lub płatność za pobraniem,tj. dokonanie Płatności gotówką przy odbiorze zamówionego Towaru za pokwitowaniem.</p>
 
               <h8>Klient niezwłocznie po złożeniu zamówienia danego Towaru dokonuje płatności, nie później niż w terminie do
@@ -313,39 +330,51 @@
   </header>
 
   <div class="jumbotron jumbotron-fluid headerImage">
-      <div class="logoBig">
-      </div>
+    <div class="logoBig">
     </div>
+  </div>
   <div class="row">
-      <div class="col-sm-6 col-md-5 col-xl-4 sidebarLeft">
+    <div class="col-sm-6 col-md-5 col-xl-4 sidebarLeft">
       <div class="container">
         <ul class="nav flex-column">
           <li class="nav-item sidebarLeftItem">
-            <div class="card" style="width: 18rem;">
+            <div class="card adapt" style="width: 18rem;">
               <div class="cardTitle">Gdzie zamówić?</div>
               <div class="card-body">
-                  <p class="card-text">
-                      <ul class="orderList">
-                      <li>Telefonicznie: 519 125 116</li> 
-                      <li>Mailowo: sklep@o-drobinka.pl</li> 
-                      <li>Poprzez <a href="https://www.facebook.com/odrobinka.kids" target="_blank">Facebook</a> </li> 
-                      <li>Sklep <a href="https://allegro.pl/uzytkownik/O-drobinka" target="_blank">Allegro</a> </li> </br>
-                      <li><b>Masz pytania?</b> </li> 
-                      <li>Napisz do nas przez formularz lub na facebooku</li> 
-                      </ul>
-                    </p>
+                <p class="card-text">
+                  <ul class="orderList">
+                    <li>Telefonicznie: 519 125 116</li>
+                    <li>Mailowo: sklep@o-drobinka.pl</li>
+                    <li>Poprzez
+                      <a href="https://www.facebook.com/odrobinka.kids" target="_blank">Facebook</a>
+                    </li>
+                    <li>Sklep
+                      <a href="https://allegro.pl/uzytkownik/O-drobinka" target="_blank">Allegro</a>
+                    </li>
+                    </br>
+                    <li>
+                      <b>Masz pytania?</b>
+                    </li>
+                    <li>Napisz do nas przez formularz lub na facebooku</li>
+                  </ul>
+                </p>
               </div>
             </div>
           </li>
           <li class="nav-item sidebarLeftItem">
-            <div class="card" style="width: 18rem;">
+            <div class="card adapt" style="width: 18rem;">
               <div class="cardTitle">Facebook</div>
               <div class="card-body">
-                <div class="fb-page" data-tabs="timeline,events,messages" data-href="https://www.facebook.com/odrobinka.kids" data-width="380"></div>
+                <div class="fb-page" data-href="https://www.facebook.com/odrobinka.kids" data-tabs="timeline" data-small-header="false" data-adapt-container-width="true"
+                  data-hide-cover="false" data-show-facepile="true">
+                  <blockquote cite="https://www.facebook.com/odrobinka.kids" class="fb-xfbml-parse-ignore">
+                    <a href="https://www.facebook.com/odrobinka.kids">Facebook</a>
+                  </blockquote>
+                </div>
               </div>
           </li>
           <li class="nav-item sidebarLeftItem">
-            <div class="card" style="width: 18rem;">
+            <div class="card adapt" style="width: 18rem;">
               <div class="cardTitle">Bestseller</div>
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -353,7 +382,7 @@
             </div>
           </li>
           <li class="nav-item sidebarLeftItem">
-            <div class="card" style="width: 18rem;">
+            <div class="card adapt" style="width: 18rem;">
               <div class="cardTitle">HOT! Promocja</div>
               <div class="card-body">
                 <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -361,26 +390,41 @@
             </div>
           </li>
         </ul>
-        <img src="http://jesien.scob24.pl/wp-content/themes/tribute/images/EU_EFS_rgb-1.jpg" alt="unia" width="300">
         </div>
       </div>
       <div class="col-sm-6 col-md-7 col-xl-8">
         <div class="container">
-          <h3 class="text-center"><i class="far fa-star"></i>Kontakt<i class="far fa-star"></i></h3>
-          <p>Możesz Nas znaleźć na naszej stronie internetowej www.o-drobinka.p , FB lub allegro.</p> <p>Zamówienia można składać poprzez
-            , stronę, allegro, FB, @ lub telefonicznie, pod numerem: <b>519 125 116</b>. W razie pytań, dodatkowych informacji, zdjęć pisz lub zdzwoń,
-            odbiorę lub oddzwonię.</p> <h5>Realizacja zamówienia:</h5> <p>Prezentowane towary są nowe i dostępne w moim sklepie. Okres realizacji
-            zamówienia wynosi 1-2 dni robocze od daty zaksięgowania wpłaty na moje konto, realizując zamówienie z opcją płatność
-            przy odbiorze zamówienie realizowane jest w tym samym lub kolejnym dniu, nie czekając na wpłatę.</p> <h5>Płatność:</h5> <p>Wpłaty
-            należy wysyłać na podane konto lub za pośrednictwem płatności Allegro. Proces realizacji zamówienia rozpoczyna
-            się po zaksięgowaniu wpłaty na koncie.</p> <h5>Nr konta:</h5> Bank Zachodni WBK <b>95 1500 1399 1013 9011 2934 0000</b>
-            <p>
+          <h3 class="text-center">
+            <i class="far fa-star"></i>Kontakt
+            <i class="far fa-star"></i>
+          </h3>
+
+          <p>Zamówienia można składać poprzez formularz kontaktu na stronie, wiadomość prywatną na facebooku, mail, na życzenie
+            poprzez allegro lub telefonicznie pod numerem 519125116. </p>
+
+          <h5>Realizacja zamówienia:</h5>
+          <p>Prezentowane towary są nowe i dostępne w moim sklepie. Okres realizacji zamówienia wynosi 1-2 dni robocze od daty
+            zaksięgowania wpłaty na moje konto, realizując zamówienie z opcją płatność przy odbiorze zamówienie realizowane
+            jest w tym samym lub kolejnym dniu, nie czekając na wpłatę. </p>
+
+          <h5>Płatność:</h5>
+          <p>Wpłaty należy wysyłać na podane konto. Proces realizacji zamówienia rozpoczyna się po zaksięgowaniu wpłaty na koncie.
+            </p>
+          ALTO Aleksandra Wójcik</br>
+          Załogi 23</br>
+          42-200 Częstochowa</br>
+          </br>
+          <h5>Nr konta:</h5>
+          <b>52 1090 2590 0000 0001 3583 2526</b> - Bank Zachodni WBK
+
+          <p>W razie pytań dodatkowych zachęcam do kontaktu.</p>
         </div>
       </div>
     </div>
 
     <footer class="text-center">
       <p>© 2018 O-drobinka</p>
+      <img src="assets/PUP.png" alt="unia" class="union">
 
     </footer>
 
